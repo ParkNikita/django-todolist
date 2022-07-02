@@ -1,0 +1,37 @@
+    <div class="relative bg-red-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="flex justify-between  items-center py-6 md:justify-start md:space-x-10">
+            <div class="flex justify-start lg:w-0 lg:flex-1">
+              <a href="{% url 'landing-page' %}">
+                <h1 class = ''>
+                  <svg class="h-12 w-12 text-blue-500"  fill="none" viewBox="0 0 24 24" stroke="white">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                  </svg>
+                </h1>
+              </a>
+            </div>
+            <nav class="md:flex space-x-10">
+      
+              <a href="{% url 'tasks:task-list' %}" class="text-base font-medium text-white hover:text-gray-900"> Tasks </a>
+              <a href="#" class="text-base font-medium text-white hover:text-gray-900"> Link </a>
+      
+            </nav>
+            
+            <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
+        
+
+              {% if request.user.is_authenticated %}
+                    <p> You are logged as {{ request.user.username }}</p>
+                    <a href = '{% url "logout" %}' class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    Log out
+                    <a/>
+              {% else %}
+            <a href="{% url 'login' %}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Log in </a>
+            <a href="{% url 'signup' %}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
+              {% endif %}
+              
+
+            </div>
+          </div>
+        </div>
+    </div>
