@@ -4,6 +4,9 @@ Simple to do list app with user registration, login, where user can add, delete 
 
 ![alt text](https://github.com/ParkNikita/django-todolist/blob/main/todolist-task-list_page.jpg?raw=true)
 # Getting started
+
+### python 3.10 Django 4.0.5
+
 To run this project you will need to set your environment variables.
 
 1. run **python -m venv env** inside the main django-todolist folder to create a virtual environment.
