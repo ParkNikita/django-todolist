@@ -20,6 +20,7 @@ To run this project you will need to set your environment variables.
 3. install all dependencies by running **`python -m pip install -r requirements.txt`**
 
 4. run **`python manage.py makemigrations`** 
-run **`python manage.py migrate`**
 
-5. run **`python manage.py runserver`**
+5. run **`python manage.py migrate`**
+
+6. run **`python manage.py runserver`**
